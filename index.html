@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Bagus#3 Machine Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Navigasi -->
+    <nav class="bg-blue-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+                <span class="font-bold text-xl">Bagus#3 Machine Learning</span>
+            </div>
+            <button id="helpBtn" class="bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded-md transition duration-200">
+                Butuh Bantuan?
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Portal Tugas Bagus#3 Machine Learning</h1>
+            <p class="text-xl mb-8 max-w-3xl font-bold mx-auto">Zero to Hero</p>
+            <p id="changingText" class="text-xl mb-8 max-w-3xl mx-auto transition-opacity duration-1000 opacity-100">Jelajahi data, temukan pola, bangun model! Semua dimulai dari sini</p>
+            <div class="flex justify-center gap-4">
+                <button id="assignmentBtn" class="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition duration-200 shadow-lg">
+                    Detail Tugas
+                </button>
+            </div>
+        </div>
+    </header>
+
+<script>
+    const texts = [
+        "Eksplorasi datasetmu secerdas ilmuwan data sejati dengan Pandas",
+        "Jangan cuma lihat data—tanyakan, curigai, dan teliti seperti detektif!",
+        "Data mentah bukan akhir, tapi awal dari cerita yang menunggu untuk diungkap",
+        "Ubah data mentah jadi wawasan tajam! mulai dengan EDA",
+        "Tugasmu, datamu, analisamu: semua dimulai dari EDA yang solid",
+        "Bukan hanya angka, tapi cerita di balik setiap titik data",
+        "Analisis data itu seperti menyusun puzzle, setiap potongan penting",
+        "Setiap baris data menyimpan cerita, temukan plotnya!",
+        "Data adalah bahan mentah, EDA adalah proses memasaknya",
+    ];
+
+    let currentIndex = 0;
+    const textElement = document.getElementById("changingText");
+
+    setInterval(() => {
+        // Fade out
+        textElement.classList.add("opacity-0");
+
+        setTimeout(() => {
+            // Ganti teks
+            currentIndex = (currentIndex + 1) % texts.length;
+            textElement.textContent = texts[currentIndex];
+
+            // Fade in
+            textElement.classList.remove("opacity-0");
+        }, 1200); // waktu transisi out
+    }, 3000); // total durasi per kalimat
+</script>
+
+    <!-- Konten Utama -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <!-- Teks Pengantar -->
+        <div class="text-center mb-12 bg-blue-50 rounded-xl py-8 px-6 shadow-sm max-w-4xl mx-auto">
+            <div class="mb-4">
+                <p class="mb-2 text-lg">Pilih <span class="font-semibold text-blue-600">satu dataset</span> yang sesuai dengan aturan ID Anda,</p>
+                <p class="text-lg">dan mulailah petualangan analisis data Anda!</p>
+            </div>
+            <div class="flex items-center justify-center text-sm text-blue-600 font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Pelajari ketentuan pemilihan dataset di bagian Detail Tugas
+            </div>
+        </div>
+
+        <!-- Grid Dataset -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- Kartu Dataset 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-blue-600 hover:shadow-lg transition duration-300 h-full flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">Dataset 1</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Untuk ID dengan kelipatan 1</p>
+                    <button class="text-blue-600 hover:text-blue-800 font-medium flex items-center mt-auto" onclick="showDatasetModal(1)">
+                        Pelajari lebih lanjut 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kartu Dataset 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-blue-600 hover:shadow-lg transition duration-300 h-full flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">Dataset 2</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Untuk ID dengan kelipatan 2</p>
+                    <button class="text-blue-600 hover:text-blue-800 font-medium flex items-center mt-auto" onclick="showDatasetModal(2)">
+                        Pelajari lebih lanjut 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kartu Dataset 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-blue-600 hover:shadow-lg transition duration-300 h-full flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">Dataset 3</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Untuk ID dengan kelipatan 3</p>
+                    <button class="text-blue-600 hover:text-blue-800 font-medium flex items-center mt-auto" onclick="showDatasetModal(3)">
+                        Pelajari lebih lanjut 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Deadline -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-blue-600 mb-8">
+            <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="flex items-start mb-4 md:mb-0">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan</h2>
+                            <p class="text-gray-700 font-medium mt-1">Senin, 21 Juli 2025 pukul 19:00 WIB</p>
+                            <p class="text-gray-500 text-sm mt-1">Pastikan mengumpulkan sebelum deadline</p>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 flex items-center justify-center gap-2 w-full md:w-auto mt-4 md:mt-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        Kumpulkan Tugas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Tugas week 1 -->
+     
+    <div id="assignmentModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <!-- Filter Week -->
+<div class="mb-4">
+  <label for="filterWeek" class="block mb-1 text-sm font-medium text-gray-700">Pilih Minggu</label>
+  <select id="filterWeek" class="w-full border border-gray-300 rounded-md p-2">
+      <option value="week1">Week 1</option>
+      <option value="week2">Week 2</option>
+  </select>
+</div>
+                    <h3 class="text-2xl font-bold text-gray-800">Detail Tugas</h3>
+                    <button id="closeAssignmentModal" class="text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            <div id="weekContent" class="space-y-6 text-gray-700"></div>
+                
+                <div class="mt-6 flex justify-end">
+                    <button id="closeAssignmentModalBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-200">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const weekContent = document.getElementById("weekContent");
+const filterWeek = document.getElementById("filterWeek");
+
+const contentData = {
+  week1: `
+    <div class="bg-blue-50 p-4 rounded-lg">
+        <h4 class="font-semibold text-lg text-blue-600 mb-2">Pilih Dataset Anda:</h4>
+        <p class="mb-2">Anda akan memilih salah satu dari tiga dataset, dengan ketentuan sebagai berikut:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Dataset 1:</strong> Dataset untuk ID kelipatan 1</li>
+            <li><strong>Dataset 2:</strong> Dataset untuk ID kelipatan 2</li>
+            <li><strong>Dataset 3:</strong> Dataset untuk ID kelipatan 3</li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas Week 1:</h4>
+                        <ol class="list-decimal pl-5 space-y-3">
+                            <li><strong>Akses Dataset:</strong> Pilih salah satu dasaset yang ada.</li>
+                            <li><strong>Lakukan Analisis Data:</strong> Lakukan Exploratory Data Analysis (EDA) menggunakan Pandas:
+                                <ul class="list-disc pl-5 mt-1 space-y-1">
+                                    <li>Ringkasan statistik (mean, median, std dev, dll.)</li>
+                                    <li>Identifikasi nilai yang hilang/missing value dan penanganannya</li>
+                                    <li>Identifikasi nilai yang terdupliasi/duplicate value dan penanganannya</li>
+                                    <li>Analisis distribusi kategorikal atau numerical</li>
+                                    <li>Gunakan groupby() untuk agregasi</li>
+                                    <li>Hitung matriks korelasi</li>
+                                </ul>
+                            </li>
+                            <li><strong>Rumuskan Langkah Selanjutnya:</strong> Berdasarkan temuan Anda, definisikan dengan jelas tujuan analisis berikutnya.</li>
+                        </ol>
+    </div>
+    <div class="bg-blue-50 p-4 rounded-lg">
+        <h4 class="font-semibold text-lg text-blue-600 mb-2">Pengumpulan:</h4>
+        <p class="mb-2">Kumpulkan paling lambat <strong>Senin, 21 Juli 2025 pukul 19:00 WIB</strong>.</p>
+        <button id="showFormatBtn" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
+            Lihat Format Laporan
+        </button>
+    </div>
+  `,
+  week2: `
+    <div class="bg-red-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Tugas Week 2:</h4>
+    <p class="text-red-600">Belum tersedia. Silakan cek kembali nanti.</p>
+</div>
+  `
+};
+
+filterWeek.addEventListener("change", () => {
+  const selected = filterWeek.value;
+  weekContent.innerHTML = contentData[selected];
+});
+
+// Set default saat pertama kali dibuka
+weekContent.innerHTML = contentData["week1"];
+</script>
+
+
+    <!-- Modal Dataset -->
+    <div id="datasetModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="datasetModalTitle" class="text-2xl font-bold text-gray-800">Detail Dataset</h3>
+                    <button id="closeDatasetModal" class="text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div id="datasetModalContent" class="text-gray-700 mb-6">
+                    <!-- Content will be inserted by JavaScript -->
+                </div>
+                
+                <div class="flex justify-end gap-2">
+                    <button id="closeDatasetModalBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-200">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Format Laporan -->
+    <div id="formatModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Format Laporan Tugas</h3>
+                    <button id="closeFormatModal" class="text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                        <p class="font-medium text-blue-700 mb-2">Format Laporan Week 1:</p>
+                        <a href="https://docs.google.com/document/d/1rD1CMX864N48w1S0Kdv3E0MNjUtCOsH6upHCIrl0CKM/edit?usp=sharing" class="text-blue-600 hover:underline break-all">Lembar Tugas_WEEK 1_Bagus#3 Machine Learning</a>
+                    </div>
+ 
+                <div class="mt-6 flex justify-end">
+                    <button id="closeFormatModalBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-200">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Bantuan -->
+    <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Butuh Bantuan?</h3>
+                    <button id="closeHelpModal" class="text-gray-500 hover:text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="text-gray-700 space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-lg text-blue-600 mb-2">Pertanyaan Umum:</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="font-medium">Bagaimana cara memilih dataset yang tepat?</p>
+                                <p class="text-sm text-gray-600">Pilih dataset berdasarkan kelipatan ID Anda. ID kelipatan 1 pilih Dataset 1, kelipatan 2 pilih Dataset 2, dan seterusnya.</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">Apa yang harus dilakukan jika menemui error?</p>
+                                <p class="text-sm text-gray-600">Periksa kembali kode Anda dan pastikan semua library yang diperlukan sudah terinstall. Jika masih error, hubungi asisten.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-lg text-blue-600 mb-2">Kontak Bantuan:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Telepon: Langsung saja chat di grup "Bagus#3"</li>
+                            <li>Jam operasional: Senin-Jumat, 10:00-21:00 WIB</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-6 flex justify-end">
+                    <button id="closeHelpModalBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition duration-200">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>Semangat Mengerjakan!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fungsi modal
+        const assignmentModal = document.getElementById('assignmentModal');
+        const formatModal = document.getElementById('formatModal');
+        const datasetModal = document.getElementById('datasetModal');
+        const helpModal = document.getElementById('helpModal');
+        
+        // Modal Tugas
+        document.getElementById('assignmentBtn').addEventListener('click', () => {
+            assignmentModal.classList.remove('hidden');
+        });
+        
+        document.getElementById('closeAssignmentModal').addEventListener('click', () => {
+            assignmentModal.classList.add('hidden');
+        });
+        
+        document.getElementById('closeAssignmentModalBtn').addEventListener('click', () => {
+            assignmentModal.classList.add('hidden');
+        });
+        
+        // Modal Format
+        document.getElementById('showFormatBtn').addEventListener('click', () => {
+            assignmentModal.classList.add('hidden');
+            formatModal.classList.remove('hidden');
+        });
+        
+        document.getElementById('closeFormatModal').addEventListener('click', () => {
+            formatModal.classList.add('hidden');
+        });
+        
+        document.getElementById('closeFormatModalBtn').addEventListener('click', () => {
+            formatModal.classList.add('hidden');
+        });
+        
+        // Modal Dataset
+        function showDatasetModal(datasetNumber) {
+            const title = document.getElementById('datasetModalTitle');
+            const content = document.getElementById('datasetModalContent');
+            
+            title.textContent = `Detail Dataset ${datasetNumber}`;
+            
+            let datasetInfo = '';
+            if (datasetNumber === 1) {
+                datasetInfo = `
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                        <p class="font-medium text-blue-700 mb-2">Link Drive:</p>
+                        <a href="https://drive.google.com/drive/folders/1y_eqiZtCkejjZqlXiMCQT1tWoenHI0vC?usp=sharing" class="text-blue-600 hover:underline break-all">Bagus#3 Machine Learning Drive ID Kelipatan 1</a>
+                    </div>
+                `;
+            } else if (datasetNumber === 2) {
+                datasetInfo = `
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                        <p class="font-medium text-blue-700 mb-2">Link Drive:</p>
+                        <a href="https://drive.google.com/drive/folders/18RmrlU4wPtRXUN8dt3n4lgYOaUtuk7ST?usp=sharing" class="text-blue-600 hover:underline break-all">Bagus#3 Machine Learning Drive ID Kelipatan 2</a>
+                    </div>
+                `;
+            } else {
+                datasetInfo = `
+                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                        <p class="font-medium text-blue-700 mb-2">Link Drive:</p>
+                        <a href="https://drive.google.com/drive/folders/153hJb4fMoCsdaZroB2cOLSDKkjKZd13I?usp=sharing" class="text-blue-600 hover:underline break-all">Bagus#3 Machine Learning Drive ID Kelipatan 3</a>
+                    </div>
+                `;
+            }
+            
+            content.innerHTML = datasetInfo;
+            datasetModal.classList.remove('hidden');
+        }
+        
+        document.getElementById('closeDatasetModal').addEventListener('click', () => {
+            datasetModal.classList.add('hidden');
+        });
+        
+        document.getElementById('closeDatasetModalBtn').addEventListener('click', () => {
+            datasetModal.classList.add('hidden');
+        });
+        
+        // Modal Bantuan
+        document.getElementById('helpBtn').addEventListener('click', () => {
+            helpModal.classList.remove('hidden');
+        });
+        
+        document.getElementById('closeHelpModal').addEventListener('click', () => {
+            helpModal.classList.add('hidden');
+        });
+        
+        document.getElementById('closeHelpModalBtn').addEventListener('click', () => {
+            helpModal.classList.add('hidden');
+        });
+
+        // Tutup modal saat klik di luar
+        window.addEventListener('click', (e) => {
+            if (e.target === assignmentModal) {
+                assignmentModal.classList.add('hidden');
+            }
+            if (e.target === formatModal) {
+                formatModal.classList.add('hidden');
+            }
+            if (e.target === datasetModal) {
+                datasetModal.classList.add('hidden');
+            }
+            if (e.target === helpModal) {
+                helpModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
