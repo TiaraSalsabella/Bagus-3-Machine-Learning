@@ -185,6 +185,36 @@
 </div>
 
 <!-- Tugas Week 2 (Biru) -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-red-600 mb-8">
+    <div class="p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div class="flex items-start mb-4 md:mb-0">
+                <div class="bg-red-100 p-2 rounded-full mr-3 mt-1">
+                    <!-- Icon Kalender -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan – Week 2</h2>
+                    <p class="text-gray-700 font-medium mt-1">Senin, 28 Juli 2025 pukul 19:00 WIB</p>
+                    <p class="text-gray-500 text-sm mt-1">Pastikan mengumpulkan sebelum deadline</p>
+                </div>
+            </div>
+            <a href="https://forms.gle/xUZkVACoQJoiTDGm6" target="_blank"
+               class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 flex items-center justify-center gap-2 w-full md:w-auto mt-4 md:mt-0">
+                <!-- Icon Upload -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+                Kumpulkan PDF
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Tugas Week 3 (Biru) -->
 <div class="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-blue-600 mb-8">
     <div class="p-6 md:p-8">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -196,12 +226,12 @@
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan – Week 2</h2>
-                    <p class="text-gray-700 font-medium mt-1">Senin, 28 Juli 2025 pukul 19:00 WIB</p>
+                    <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan – Week 3</h2>
+                    <p class="text-gray-700 font-medium mt-1">Senin, 4 Agustus 2025 pukul 19:00 WIB</p>
                     <p class="text-gray-500 text-sm mt-1">Pastikan mengumpulkan sebelum deadline</p>
                 </div>
             </div>
-            <a href="https://forms.gle/xUZkVACoQJoiTDGm6" target="_blank"
+            <a href="https://forms.gle/gqFW7jqpFPBFXLpD7" target="_blank"
                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 flex items-center justify-center gap-2 w-full md:w-auto mt-4 md:mt-0">
                 <!-- Icon Upload -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -213,7 +243,7 @@
         </div>
     </div>
 </div>
- 
+
     <!-- Modal Tugas week 1 -->
      
     <div id="assignmentModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
@@ -229,6 +259,9 @@
       <option value="week3">Week 3</option>
       <option value="week4">Week 4</option>
       <option value="week5">Week 5</option>
+      <option value="week5">Week 6</option>
+      <option value="week5">Week 7</option>
+      <option value="week5">Week 8</option>
   </select>
 </div>
                     <h3 class="text-2xl font-bold text-gray-800">Detail Tugas</h3>
@@ -260,9 +293,9 @@ const contentData = {
         <h4 class="font-semibold text-lg text-red-600 mb-2">Pilih Dataset Anda:</h4>
         <p class="mb-2">Anda akan memilih salah satu dari tiga dataset, dengan ketentuan sebagai berikut:</p>
         <ul class="list-disc pl-5 space-y-1">
-            <li><strong>Dataset 1:</strong> ((nomor_kelompok - 1) MOD 3) + 1</li>
-            <li><strong>Dataset 2:</strong> ((nomor_kelompok - 1) MOD 3) + 1</li>
-            <li><strong>Dataset 3:</strong> ((nomor_kelompok - 1) MOD 3) + 1</li>
+            <li><strong>Dataset 1:</strong> ((nomor_ID - 1) MOD 3) + 1</li>
+            <li><strong>Dataset 2:</strong> ((nomor_ID - 1) MOD 3) + 1</li>
+            <li><strong>Dataset 3:</strong> ((nomor_ID - 1) MOD 3) + 1</li>
         </ul>
     </div>
     <div>
@@ -286,14 +319,16 @@ const contentData = {
     <div class="bg-red-50 p-4 rounded-lg">
         <h4 class="font-semibold text-lg text-red-600 mb-2">Sesi Pengerjaan Telah Selesai!</h4>
         <p class="mb-2">Kumpulkan paling lambat <strong>Senin, 21 Juli 2025 pukul 19:00 WIB</strong>.</p>
-        <button id="showFormatBtn" class="mt-4 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
-            Lihat Format Laporan
-        </button>
+        <a href="https://docs.google.com/document/d/1rD1CMX864N48w1S0Kdv3E0MNjUtCOsH6upHCIrl0CKM/edit?usp=sharing" target="_blank">
+    <button class="mt-4 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
+        Lihat Format Laporan
+    </button>
+</a>
     </div>
   `,
   week2: `
-<div class="bg-blue-50 p-4 rounded-lg">
-    <h4 class="font-semibold text-lg text-blue-600 mb-2">Pembagian Dataset per Kelompok:</h4>
+<div class="bg-red-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Pembagian Dataset per Kelompok:</h4>
     <p class="mb-2">Tugas ini dikerjakan secara <strong>berkelompok</strong>, satu kelompok terdiri dari <strong>3 individu</strong>. Pembagian dataset dilakukan sebagai berikut:</p>
     <ul class="list-disc pl-5 space-y-1">
         <li><strong>Dataset 1:</strong> untuk Kelompok 1, 4, 7, 10, dst</li>
@@ -308,7 +343,7 @@ const contentData = {
 </div>
 
 <div>
-    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas Week 2:</h4>
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Panduan Pengerjaan Tugas Week 2:</h4>
     <ol class="list-decimal pl-5 space-y-3">
         <li><strong>Exploratory Data Analysis (EDA):</strong> 
             <ul class="list-disc pl-5 mt-1 space-y-1">
@@ -328,24 +363,87 @@ const contentData = {
     </ol>
 </div>
 
-<div class="bg-blue-50 p-4 rounded-lg">
-    <h4 class="font-semibold text-lg text-blue-600 mb-2">Pengumpulan:</h4>
+<div class="bg-red-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Sesi Pengerjaan Telah Selesai!</h4>
     <p class="mb-2 text-gray-700 leading-relaxed">
-    <span class="font-medium text-blue-700">Pengumpulan cukup dilakukan oleh satu perwakilan kelompok saja</span>, dalam bentuk file <strong>PPT</strong> atau <strong>PPT yang dijadikan PDF</strong>. 
-    Pastikan file sudah lengkap dan dikumpulkan paling lambat 
-    <strong class="text-black-600">Senin, 28 Juli 2025 pukul 19:00 WIB</strong>.
-</p>
-    <!-- <button id="showFormatBtn" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
+        <span class="font-medium text-red-700">Pengumpulan cukup dilakukan oleh satu perwakilan kelompok saja</span>, dalam bentuk file <strong>PPT</strong> atau <strong>PPT yang dijadikan PDF</strong>. 
+        Pastikan file sudah lengkap dan dikumpulkan paling lambat 
+        <strong class="text-black-600">Senin, 28 Juli 2025 pukul 19:00 WIB</strong>.
+    </p>
+    <!-- <button id="showFormatBtn" class="mt-4 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
         Lihat Format Laporan
     </button> -->
 </div>
-
   `
   ,
     week3: `
-    <div class="bg-red-50 p-4 rounded-lg">
-    <h4 class="font-semibold text-lg text-red-600 mb-2">Tugas Week 3:</h4>
-    <p class="text-red-600">Belum tersedia. Silakan cek kembali nanti.</p>
+    <div class="bg-blue-50 p-4 rounded-lg">
+        <h4 class="font-semibold text-lg text-blue-600 mb-2">Pilih Dataset Anda:</h4>
+        <p class="mb-2">Anda akan memilih salah satu dari tiga dataset, dengan ketentuan sebagai berikut:</p>
+        <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Dataset 1:</strong> ((nomor_ID - 1) MOD 3) + 1</li>
+            <li><strong>Dataset 2:</strong> ((nomor_ID - 1) MOD 3) + 1</li>
+            <li><strong>Dataset 3:</strong> ((nomor_ID - 1) MOD 3) + 1</li>
+        </ul>
+    </div>
+
+    <div>
+    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas Week 3:</h4>
+    <ol class="list-decimal pl-5 space-y-3">
+        <li>
+            <strong>Eksplorasi Data:</strong> Lakukan analisis awal terhadap dataset Anda:
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+                <li>Jumlah baris dan kolom</li>
+                <li>Tipe fitur (numerik/kategorikal)</li>
+                <li>Nilai hilang (missing values) dan penanganannya</li>
+                <li>Distribusi dari target class, dan lain sebagainya <strong>(tidak harus lengkap)</strong></li>
+            </ul>
+        </li>
+        <li>
+            <strong>Pembagian Data:</strong> Lakukan pemisahan dataset menjadi data latih dan data uji menggunakan <code>train_test_split</code>. Gunakan juga <strong>Cross Validation (n-Fold)</strong> untuk evaluasi model.
+        </li>
+        <li>
+            <strong>Model Klasifikasi:</strong> Buat dan latih model klasifikasi menggunakan algoritma berikut:
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+                <li>k-Nearest Neighbors (k-NN)</li>
+                <li>Logistic Regression</li>
+                <li>Decision Tree</li>
+                <li>Random Forest</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Evaluasi Model:</strong> Ukur kinerja dari masing-masing model menggunakan metrik:
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+                <li>Accuracy</li>
+                <li>Precision, Recall, dan F1-score</li>
+                <li>Confusion Matrix</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Hyperparameter Tuning:</strong> Lakukan tuning parameter untuk dua model berikut menggunakan <code>GridSearchCV</code>, <code>RandomizedSearchCV, atau yang sudah dipelajari </code> di kelas Bagus <strong> minimal pilih 2:</strong>
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+                <li><strong>k-NN</strong> (contoh: jumlah tetangga/k)</li>
+                <li><strong>Random Forest</strong> (contoh: max_depth, n_estimators)</li> <strong>bisa menggunakan model lain yang telah dipelajari</strong>
+            </ul>
+        </li>
+        <li>
+            <strong>Interpretasi & Insight:</strong> 
+            <ul class="list-disc pl-5 mt-1 space-y-1">
+                <li>Tentukan model terbaik berdasarkan metrik evaluasi</li>
+                <li>Berikan minimal satu rekomendasi yang relevan dengan konteks dataset Anda</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<div class="bg-blue-100 p-4 rounded-lg mt-6">
+    <h4 class="font-semibold text-lg text-blue-700 mb-2">Pengumpulan</h4>
+    <p class="mb-2">Kumpulkan paling lambat <strong>Senin, 4 Agustus 2025 pukul 19:00 WIB</strong>.</p>
+    <a href="https://docs.google.com/document/d/1yHUiHeBJbuIAcre48D7cKHD5cOH5EEpYrh13bxC9GZQ/edit?usp=sharing" target="_blank">
+    <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
+        Lihat Format Laporan
+    </button>
+</a>
 </div>
   `
   ,
@@ -357,6 +455,20 @@ const contentData = {
   `
   ,   
    week5: `
+    <div class="bg-red-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Tugas Week 5:</h4>
+    <p class="text-red-600">Belum tersedia. Silakan cek kembali nanti.</p>
+</div>
+  `
+    ,   
+   week6: `
+    <div class="bg-red-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Tugas Week 5:</h4>
+    <p class="text-red-600">Belum tersedia. Silakan cek kembali nanti.</p>
+</div>
+  `
+    ,   
+   week7: `
     <div class="bg-red-50 p-4 rounded-lg">
     <h4 class="font-semibold text-lg text-red-600 mb-2">Tugas Week 5:</h4>
     <p class="text-red-600">Belum tersedia. Silakan cek kembali nanti.</p>
