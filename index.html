@@ -481,26 +481,38 @@ const contentData = {
       week4: `
     <div class="bg-blue-50 p-4 rounded-lg">
         <h4 class="font-semibold text-lg text-blue-600 mb-2">Pilih Dataset Anda:</h4>
-        <p class="mb-2">Dataset untuk Minggu ini hanya menggunakan 1 Dataset yaitu <strong>WEEK4_House.csv</strong> saja</p>
+        <p class="mb-2">Minggu ini ada 2 TUGAS yang harus dikerjakan. Pengerjaan TUGAS 1 menggunakan dataset <strong>WEEK4_House TUGAS 1.csv</strong>, sedangkan pengerjaan TUGAS 2 menggunakan dataset <strong>WEEK4_Listrik TUGAS 2.csv. LAPORAN NANTI HARUS DIPISAH YA! format bisa dilihat di bawah.</strong></p>
         <ul class="list-disc pl-5 space-y-1">
         </ul>
     </div>
 
-    <div>
-    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas Week 4:</h4>
+<div>
+    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas 1:</h4>
     <ol class="list-decimal pl-5 space-y-3">
-    <li><strong>Eksplorasi Data:</strong> Jumlah data, tipe fitur, missing values, dsb.</li>
-    <li><strong>Preprocessing:</strong> Normalisasi, encoding, transformasi jika perlu.</li>
-    <li><strong>Modeling:</strong> Minimal 1 model regresi (boleh lebih untuk komparasi dan hanya boleh menggunakan antara Linear Regression, Polynomial Regression, Decision Tree Regression, dan Random Forest Regression).</li>
-    <li><strong>Evaluasi:</strong> Bandingkan model berdasarkan <code>RMSE</code> dan <code>MSE</code>.</li>
-    <li><strong>Visualisasi:</strong> Grafik prediksi vs aktual, plot error, dsb.</li>
-    <li><strong>Kesimpulan:</strong> Pilih model terbaik dan alasan pemilihannya (taruh saja di laporan).</li>
-  </ol>
+        <li><strong>Eksplorasi Data:</strong> Jumlah data, tipe fitur, missing values, distribusi target.</li>
+        <li><strong>Preprocessing:</strong> Normalisasi/scaling, encoding kategori, transformasi log/√ jika perlu.</li>
+        <li><strong>Modeling:</strong> Latih minimal satu model dari daftar yang diperbolehkan, lakukan tuning jika perlu.</li>
+        <li><strong>Evaluasi:</strong> Bandingkan model berdasarkan <code>RMSE</code> dan <code>MSE</code>.</li>
+        <li><strong>Visualisasi:</strong> Grafik prediksi vs aktual, residual plot, feature importance (jika ada).</li>
+        <li><strong>Kesimpulan:</strong> Pilih model terbaik dan alasan pemilihannya.</li>
+    </ol>
+</div>
+
+<div>
+    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas 2:</h4>
+    <ol class="list-decimal pl-5 space-y-3">
+        <li><strong>Eksplorasi Data:</strong> Cek format tanggal, frekuensi data, trend, seasonality, dan missing values.</li>
+        <li><strong>Preprocessing:</strong> Konversi tanggal ke format <code>datetime</code>, set index waktu, buat lag features, rolling mean, dsb.</li>
+        <li><strong>Modeling:</strong> Gunakan metode forecasting dengan fitur lag.</li>
+        <li><strong>Evaluasi:</strong> Gunakan <code>RMSE</code> dan <code>MSE</code> pada data test terakhir.</li>
+        <li><strong>Visualisasi:</strong> Plot actual vs forecast, error over time.</li>
+        <li><strong>Kesimpulan:</strong> Pilih metode terbaik dan alasannya.</li>
+    </ol>
 </div>
 
 <div class="bg-blue-100 p-4 rounded-lg mt-6">
     <h4 class="font-semibold text-lg text-blue-700 mb-2">Pengumpulan</h4>
-    <p class="mb-2">Kumpulkan paling lambat <strong>Sabtu, 9 Agustus 2025 pukul 19:00 WIB</strong>.</p>
+    <p class="mb-2">Kumpulkan paling lambat <strong>Sabtu, 9 Agustus 2025 pukul 19:00 WIB</strong> LAPORAN TUGAS 1 dan TUGAS 2 DIPISAH.</p>
     <a href="https://docs.google.com/document/d/1xasnkMHeq6X_yxUCg-Z2Gfy867wZdpAaJoV9f7M7v1w/edit?usp=sharing" target="_blank">
     <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
         Lihat Format Laporan
