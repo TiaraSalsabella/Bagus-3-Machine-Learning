@@ -244,7 +244,37 @@
     </div>
 </div>
 
-<!-- Tugas Week 4 (Biru) -->
+<!-- Tugas Week 4 (Merah modern) -->
+<div class="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-red-600 mb-8">
+    <div class="p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div class="flex items-start mb-4 md:mb-0">
+                <div class="bg-red-100 p-2 rounded-full mr-3 mt-1">
+                    <!-- Icon Kalender -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan – Week 4</h2>
+                    <p class="text-gray-700 font-medium mt-1">Sabtu, 9 Agustus 2025 pukul 19:00 WIB</p>
+                    <p class="text-gray-500 text-sm mt-1">Pastikan mengumpulkan sebelum deadline</p>
+                </div>
+            </div>
+            <a href="https://forms.gle/j8MfUUkg6vnio7ki9" target="_blank"
+               class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 flex items-center justify-center gap-2 w-full md:w-auto mt-4 md:mt-0">
+                <!-- Icon Upload -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+                Kumpulkan PDF
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Tugas Week 5 (Biru) -->
 <div class="bg-white rounded-xl shadow-md overflow-hidden border-l-4 border-blue-600 mb-8">
     <div class="p-6 md:p-8">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -256,12 +286,12 @@
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan – Week 4</h2>
-                    <p class="text-gray-700 font-medium mt-1">Sabtu, 9 Agustus 2025 pukul 19:00 WIB</p>
+                    <h2 class="text-xl font-bold text-gray-800">Batas Pengumpulan – Week 5</h2>
+                    <p class="text-gray-700 font-medium mt-1">Sabtu, 16 Agustus 2025 pukul 19:00 WIB</p>
                     <p class="text-gray-500 text-sm mt-1">Pastikan mengumpulkan sebelum deadline</p>
                 </div>
             </div>
-            <a href="https://forms.gle/j8MfUUkg6vnio7ki9" target="_blank"
+            <a href="https://forms.gle/jwLf1SnXxwt5YMyD7" target="_blank"
                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200 flex items-center justify-center gap-2 w-full md:w-auto mt-4 md:mt-0">
                 <!-- Icon Upload -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -479,15 +509,15 @@ const contentData = {
   `
   ,
       week4: `
-    <div class="bg-blue-50 p-4 rounded-lg">
-        <h4 class="font-semibold text-lg text-blue-600 mb-2">Pilih Dataset Anda:</h4>
+    <div class="bg-red-50 p-4 rounded-lg">
+        <h4 class="font-semibold text-lg text-red-600 mb-2">Pilih Dataset Anda:</h4>
         <p class="mb-2">Minggu ini ada 2 TUGAS yang harus dikerjakan. Pengerjaan TUGAS 1 menggunakan dataset <strong>WEEK4_House TUGAS 1.csv</strong>, sedangkan pengerjaan TUGAS 2 menggunakan dataset <strong>WEEK4_Listrik TUGAS 2.csv. LAPORAN NANTI HARUS DIPISAH YA! format bisa dilihat di bawah.</strong></p>
         <ul class="list-disc pl-5 space-y-1">
         </ul>
     </div>
 
 <div>
-    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas 1:</h4>
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Panduan Pengerjaan Tugas 1:</h4>
     <ol class="list-decimal pl-5 space-y-3">
         <li><strong>Eksplorasi Data:</strong> Jumlah data, tipe fitur, missing values, distribusi target.</li>
         <li><strong>Preprocessing:</strong> Normalisasi/scaling, encoding kategori, transformasi log/√ jika perlu.</li>
@@ -499,7 +529,7 @@ const contentData = {
 </div>
 
 <div>
-    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan Tugas 2:</h4>
+    <h4 class="font-semibold text-lg text-red-600 mb-2">Panduan Pengerjaan Tugas 2:</h4>
     <ol class="list-decimal pl-5 space-y-3">
         <li><strong>Eksplorasi Data:</strong> Cek format tanggal, frekuensi data, trend, seasonality, dan missing values.</li>
         <li><strong>Preprocessing:</strong> Konversi tanggal ke format <code>datetime</code>, set index waktu, buat lag features, rolling mean, dsb.</li>
@@ -510,11 +540,11 @@ const contentData = {
     </ol>
 </div>
 
-<div class="bg-blue-100 p-4 rounded-lg mt-6">
-    <h4 class="font-semibold text-lg text-blue-700 mb-2">Pengumpulan</h4>
+<div class="bg-red-100 p-4 rounded-lg mt-6">
+    <h4 class="font-semibold text-lg text-red-700 mb-2">Pengumpulan</h4>
     <p class="mb-2">Kumpulkan paling lambat <strong>Minggu, 10 Agustus 2025 pukul 19:00 WIB</strong> LAPORAN TUGAS 1 dan TUGAS 2 DIPISAH.</p>
     <a href="https://docs.google.com/document/d/1xasnkMHeq6X_yxUCg-Z2Gfy867wZdpAaJoV9f7M7v1w/edit?usp=sharing" target="_blank">
-    <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
+    <button class="mt-4 bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
         Lihat Format Laporan
     </button>
 </a>
@@ -522,9 +552,60 @@ const contentData = {
   `
   ,   
    week5: `
-    <div class="bg-red-50 p-4 rounded-lg">
-    <h4 class="font-semibold text-lg text-red-600 mb-2">Tugas Week 5:</h4>
-    <p class="text-red-600">Belum tersedia. Silakan cek kembali nanti.</p>
+    <div class="bg-blue-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-lg text-blue-600 mb-2">Tugas Clustering WEEK 5:</h4>
+    <p class="mb-2">
+        Pada tugas ini, Kamu akan melakukan dua metode clustering menggunakan
+        (<strong>K-Means</strong> dan <strong>DBSCAN</strong>), dilengkapi evaluasi dan visualisasi menggunakan
+        <strong>PCA</strong> dan <strong>t-SNE</strong>.
+    </p>
+</div>
+
+<div>
+    <h4 class="font-semibold text-lg text-blue-600 mb-2">Panduan Pengerjaan:</h4>
+    <ol class="list-decimal pl-5 space-y-3">
+        <li>
+            <strong>Eksplorasi Data:</strong> 
+            Periksa jumlah data, tipe fitur, nilai hilang (missing values), dan distribusi fitur menggunakan EDA.
+        </li>
+        <li>
+            <strong>Preprocessing:</strong> 
+            Lakukan normalisasi pada fitur numerik (contoh: StandardScaler atau MinMaxScaler) untuk memastikan skala fitur seragam.
+        </li>
+        <li>
+            <strong>Clustering:</strong>
+            <ul class="list-disc pl-5 space-y-1">
+                <li>Terapkan <strong>K-Means</strong> untuk segmentasi pelanggan dan simpan label clusternya.</li>
+                <li>Terapkan <strong>DBSCAN</strong> untuk mengidentifikasi cluster yang tidak berbentuk bulat dan bandingkan hasilnya dengan K-Means.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Evaluasi:</strong> 
+            Gunakan <code>Silhouette Score</code> dan <code>Davies-Bouldin Index</code> atau matriks yang lain untuk mengukur kualitas cluster dari kedua metode.
+        </li>
+        <li>
+            <strong>Visualisasi:</strong>
+            <ul class="list-disc pl-5 space-y-1">
+                <li>Gunakan <strong>PCA</strong> untuk mereduksi dimensi ke 2D dan visualisasikan hasil clustering.</li>
+                <li>Gunakan <strong>t-SNE</strong> untuk visualisasi non-linear yang lebih jelas.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Kesimpulan:</strong> 
+            Bandingkan hasil K-Means dan DBSCAN, sebutkan metode yang lebih baik untuk dataset ini dan jelaskan alasannya MASUKKAN DALAM LAPORAN jangan lupa tambahkan insight.
+        </li>
+    </ol>
+</div>
+
+
+<div class="bg-blue-100 p-4 rounded-lg mt-6">
+    <h4 class="font-semibold text-lg text-blue-700 mb-2">Pengumpulan</h4>
+    <p class="mb-2">Kumpulkan paling lambat <strong> Sabtu, 16 Agustus 2025 pukul 19:00 WIB</strong></p>
+    <a href="https://docs.google.com/document/d/1xasnkMHeq6X_yxUCg-Z2Gfy867wZdpAaJoV9f7M7v1w/edit?usp=sharing" target="_blank">
+    <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-200">
+        Lihat Format Laporan
+    </button>
+</a>
 </div>
   `
     ,   
